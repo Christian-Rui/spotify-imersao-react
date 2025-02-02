@@ -1,5 +1,6 @@
 import Sidebar from './pages/Sidebar/Sidebar.js';
 import MainContent from './pages/MainContent/MainContent.js'
+import Footer from './pages/Footer/Footer.js';
 
 
 import './styles/reset.css';
@@ -11,6 +12,7 @@ function App() {
     <>
       <Sidebar></Sidebar>
       <MainContent></MainContent>
+      <Footer></Footer>
     </> 
   );
 }
