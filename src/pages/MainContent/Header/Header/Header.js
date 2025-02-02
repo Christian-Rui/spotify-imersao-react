@@ -1,21 +1,27 @@
 import React from "react";
 
+import ArrowButton from "./ArrowButton";
+
 import "./Header.css";
 
-import smallLeft from "../../assets/icons/small-left.png"
-import smallRight from "../../assets/icons/small-right.png"
-import search from "../../assets/icons/search.png"
+import smallLeft from "../../../../assets/icons/small-left.png"
+import smallRight from "../../../../assets/icons/small-right.png"
+import search from "../../../../assets/icons/search.png"
 
 const Header = () => {
     return (
         <nav className="header__navigation">
             <div className="navigation">
-                <button className="arrow-left">
-                    <img src={smallLeft} alt="Seta Esquerda" />
-                </button>
-                <button className="arrow-right">
-                    <img src={smallRight} alt="Seta Direita" />
-                </button>
+                <ArrowButton
+                    classDir={"left"}
+                    imgSrc={smallLeft}
+                    altDir={"Esquerda"}
+                ></ArrowButton>
+                <ArrowButton
+                    classDir={"right"}
+                    imgSrc={smallRight}
+                    altDir={"Direita"}
+                ></ArrowButton>
             </div>
             <div className="header__search">
                 <img src={search}  alt="" />

@@ -1,5 +1,6 @@
-import Header from './pages/Header/Header.js';
 import Sidebar from './pages/Sidebar/Sidebar.js';
+import MainContent from './pages/MainContent/MainContent.js'
+
 
 import './styles/reset.css';
 import './styles/vars.css';
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <Sidebar></Sidebar>
-      <Header></Header>
+      <MainContent></MainContent>
     </> 
   );
 }
