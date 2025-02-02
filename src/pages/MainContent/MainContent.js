@@ -7,12 +7,13 @@ import ArtistSearch from './Playlist/ArtistSearch';
 
 import './MainContent.css';
 
-import smallLeft from "../../assets/icons/small-left.png"
-import smallRight from "../../assets/icons/small-right.png"
-import search from "../../assets/icons/search.png"
+import smallLeft from "../../assets/icons/small-left.png";
+import smallRight from "../../assets/icons/small-right.png";
+import search from "../../assets/icons/search.png";
+
+import artistsData from '../../api-artists/artists.json';
 
 const MainContent = () => {
-
     const [searchTerm, setSearchTerm] = useState('');
     const [artists, setArtists] = useState([]);
     const [showResults, setShowResults] = useState(false);
@@ -23,12 +24,28 @@ const MainContent = () => {
             const response = await axios.get(url);
             displayResults(response.data, term);
         } catch (error) {
-            console.error('Erro ao buscar artistas:', error);
+            
+            console.error('Erro ao buscar artistas, usando dados locais');
+            // Se a API falhar, use os dados do JSON local
+            displayResults(artistsData, term);
         }
     };
 
     const displayResults = (result, term) => {
-        const filteredArtists = result.filter(artist =>
+        
+        let artistsArray;
+
+        // Verifica se result é um array
+        if (Array.isArray(result)) {
+            artistsArray = result;
+        } else if (result.artists && Array.isArray(result.artists)) {
+            artistsArray = result.artists;
+        } else {
+            console.error('A resposta não contém dados válidos:', result);
+            artistsArray = [];
+        }
+
+        const filteredArtists = artistsArray.filter(artist =>
             artist.name.toLowerCase().includes(term)
         );
 
@@ -57,12 +74,12 @@ const MainContent = () => {
                         classDir={"left"}
                         imgSrc={smallLeft}
                         altDir={"Esquerda"}
-                    ></ArrowButton>
+                    />
                     <ArrowButton
                         classDir={"right"}
                         imgSrc={smallRight}
                         altDir={"Direita"}
-                    ></ArrowButton>
+                    />
                 </div>
                 <div className="header__search">
                     <img src={search} alt="" />
@@ -80,19 +97,17 @@ const MainContent = () => {
                     <button className="subscribe">Inscreva-se</button>
                     <button className="login">Entrar</button>
                 </div>
-
             </nav>
 
             <div className="playlist-container">
-                <Playlist show={showResults}></Playlist>
+                <Playlist show={showResults} />
                 <ArtistSearch
                     showResults={showResults}
                     artists={artists}
-                >
-                </ArtistSearch>
+                />
             </div>
         </main>
-    )
+    );
 }
 
 export default MainContent;
