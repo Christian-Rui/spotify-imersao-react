@@ -1,10 +1,18 @@
-import logo from './logo.svg';
+import Header from './pages/Header/Header.js';
+import Sidebar from './pages/Sidebar/Sidebar.js';
+
+import './styles/reset.css';
+import './styles/vars.css';
 import './App.css';
-import Header from "./pages/Header/Header.js"
+
+import logo from './logo.svg';
 
 function App() {
   return (
-    <Header></Header>
+    <>
+      <Sidebar></Sidebar>
+      <Header></Header>
+    </> 
   );
 }
 
