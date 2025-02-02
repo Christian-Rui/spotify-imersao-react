@@ -5,8 +5,6 @@ import './styles/reset.css';
 import './styles/vars.css';
 import './App.css';
 
-import logo from './logo.svg';
-
 function App() {
   return (
     <>

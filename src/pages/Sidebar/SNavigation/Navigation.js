@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
 
-import NavLink from "./NavLink";
+import NavLink from './NavLink';
 
-import "./Navigation.css"
+import './Navigation.css';
 
-import logoSpotify from "../../../assets/icons/logo-spotify.png";
+import logoSpotify from '../../../assets/icons/logo-spotify.png';
 
 const Navigation = () => {
     return(
