@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react';
 
-import Navigation from "./Navigation/Navigation.js";
+import Navigation from './SNavigation/Navigation.js';
+import Library from './SLibrary/Library.js';
 
-import "./Sidebar.css"
+import './Sidebar.css';
 
 const Sidebar = () => {
     return(
         <div className="sidebar">
             <Navigation></Navigation>
+            <Library></Library>
         </div>
     );
 }
