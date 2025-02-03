@@ -13,7 +13,7 @@ const Navigation = () => {
         <nav className="sidebar__navigation">
 
             <div className="logo">
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <a href="about:blank">
                     <img src={logoSpotify} alt="Logo do Spotify" />
                 </a>
             </div>

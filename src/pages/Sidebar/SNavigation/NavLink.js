@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const NavLink = ({ icon, text, href }) => (
     <li>
-        <a href="#" onClick={(e) => e.preventDefault()}>
+        <a href="about:blank">
             <FontAwesomeIcon
                 className="faNav"
                 icon={icon} 

@@ -34,7 +34,7 @@ const Library = () => {
             </section>
 
             <div className="cookies">
-                <a href="">Cookies</a>
+                <a href="about:blank">Cookies</a>
             </div>
 
             <div className="languages">

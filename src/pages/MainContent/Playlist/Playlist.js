@@ -78,7 +78,7 @@ const Playlist = ({ show }) => {
                 <div className="offer__list">
                     <section className="offer__list-item">
                         {playlistsOffer.map((offer, index) => (
-                            <a key={index} href="" className="cards">
+                            <a key={index} href="about:blank" className="cards">
                                 <div className={`cards card${index + 1}`}>
                                     <img src={offer.imgSrc} alt="" />
                                     <span>{offer.text}</span>
