@@ -86,13 +86,12 @@
 }
 
 .play {
-  position: relative;
+  position: absolute;
+  right: 20px;
+  bottom: 0;
 }
 
 .play .fa-play {
-  position: absolute;
-  right: 10px;
-  top: 120px;
   padding: 18px;
   background-color: #1db954;
   border-radius: 100%;
