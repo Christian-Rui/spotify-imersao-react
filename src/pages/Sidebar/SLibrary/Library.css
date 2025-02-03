@@ -39,8 +39,28 @@
     padding-right: 8px;
 }
 
+.library .library__button:hover{
+    .faLib{
+        color: #fff;
+    }
+    color: #fff;
+}
+
 .library .library__content .plus {
-    margin: 24px 10px;
+    margin: 15px 10px;
+    cursor: pointer;
+    border-radius: 50%;  
+    padding: 5px 6px 4px 6px;
+    color: #b3b3b3;
+}
+
+.library .library__content .btnPlus{
+    background-color: transparent;
+    border: 0px;
+}
+
+.library .library__content .plus:hover {
+    background-color: #242424;
 }
 
 .section-playlist {
@@ -118,4 +138,8 @@
     margin: 8px;
     padding: 8px;
     border-radius: 20px;
+}
+
+.languages__button:hover{
+    border: 1px solid #fff;
 }

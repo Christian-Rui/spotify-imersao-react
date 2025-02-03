@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const ButtonIcon = ({ btnClass, iconClass, icon, text}) => (
+const ButtonIcon = ({ btnClass, iconClass, icon, text, tooltip}) => (
     <button className={btnClass} >
         <FontAwesomeIcon 
             className={iconClass}
@@ -11,6 +11,9 @@ const ButtonIcon = ({ btnClass, iconClass, icon, text}) => (
         <span>
             {text}
         </span>
+        {tooltip && (
+            tooltip
+        )}
     </button>
 );
 

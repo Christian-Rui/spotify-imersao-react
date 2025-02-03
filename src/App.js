@@ -5,6 +5,7 @@ import Footer from './pages/Footer/Footer.js';
 
 import './styles/reset.css';
 import './styles/vars.css';
+import "./styles/tooltip.css";
 import './App.css';
 
 function App() {

@@ -11,12 +11,16 @@ const Library = () => {
         <div className="library">
             <div className="library__content">
                 <ButtonIcon
-                    btnClass={"library__button"}
+                    btnClass={"library__button tooltip"}
                     iconClass={"faLib"}
                     icon={faBook}
                     text={"Sua Biblioteca"}
+                    tooltip={<span className="tooltiptext">Ocultar Sua Biblioteca</span>}
                 ></ButtonIcon>
-                <FontAwesomeIcon className='plus' icon={faPlus}></FontAwesomeIcon>
+                <button className='tooltip btnPlus'>
+                    <FontAwesomeIcon className='plus' icon={faPlus}></FontAwesomeIcon>
+                    <span className="tooltiptext">Ocultar Sua Biblioteca</span>
+                </button>
             </div>
 
             <section className="section-playlist">
