@@ -34,8 +34,8 @@
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  gap: 16px;
+  /* grid-gap: 16px;
+  gap: 5px; */
   margin-bottom: 16px;
 }
 
@@ -49,6 +49,14 @@
   height: 220px;
   overflow: hidden;
   border-radius: 8px;
+}
+
+.offer__list-item a{
+  padding: 10px;
+}
+
+.offer__list-item a:hover{
+  background-color: #252525;
 }
 
 .cards span {
